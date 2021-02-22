@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="main">
-    
+      
         <nav class="nav_bar">
            <h2 class="title">TOOLS<i class="fas fa-tools"></i></h2> 
           <ul>
@@ -22,25 +22,78 @@
           <li><a href="translator.html">Translator</a></li>
         </ul>  
         </nav>
-     
+        <div class="wrapper">
+        <h3 class="title2">Stopwatch</h3>
           <div class="main_content">
+            
            <div>
-               <span class="stopwatch">00:00:00:00</span>
+               <span class="stopwatch" id="view">00:00:00:00</span>
            </div>
            <div class="buttons">
-               <input type="button" value="Start" >
-               <input type="button" value="Stop">
-               <input type="button" value="Reset">
+               <input type="button" value="Start" id="btn1">
+               <input type="button" value="Stop" id="btn2">
+               <input type="button" value="Reset" id="btn3">
            </div>     
         </div> 
    
-
+          </div>
 
     </div>
   
     <script>
-     
+        let ms = "00", s ="00", min ="00", hr = "00", id;
+      
+ 
+      function stopwatch(){
+      
+          if(ms++ === 99){
+              ms=0;
+              s++;
+              s<10? s="0"+s: s;
+          }
 
+          if(s === 60){
+              s =0;
+              min++;
+              min<10? min="0"+min: min;
+          }
+
+          if(min === 60){
+              min =0;
+              hr++;
+              hr<10? hr="0"+hr: hr;
+          }
+        ms<10?ms="0"+ms:ms;
+       document.querySelector('#view').innerText = hr+':'+min +':'+s +':'+  ms;
+
+        
+      }
+
+    function run (){
+        pause()
+       id = setInterval(stopwatch, 10);
+    }
+ 
+  
+    function pause() {
+         clearInterval(id); 
+
+    }
+ 
+   function reset(){
+       pause()
+       ms =0;
+       s =0;
+       min =0;
+       hr =0;
+       document.querySelector('#view').innerText = "00:00:00:00";
+    
+   }
+
+
+      document.querySelector('#btn1').addEventListener('click', run);
+      document.querySelector('#btn2').addEventListener('click', pause );
+      document.querySelector('#btn3').addEventListener('click', reset);
 
     </script>
 
