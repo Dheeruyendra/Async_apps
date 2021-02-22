@@ -10,6 +10,8 @@
     display: flex;
     justify-content: space-around;
     background-color:#00171F;
+    height: 60px;
+    align-items: center;
     
 }
 
