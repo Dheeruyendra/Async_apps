@@ -38,6 +38,13 @@
     flex-wrap:wrap;
 }
 
-.input_feild {
-    
+.input_feild input {
+     font-size: larger;
+     width: 100px;
+     height: 40px;
+     font-family: 'Alatsi';
+     border: 0px;
+     margin: 10px;
+     
 }
+
