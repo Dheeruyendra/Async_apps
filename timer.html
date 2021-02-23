@@ -28,24 +28,71 @@
             <p class="icon"><i class="fas fa-hourglass-half fa-5x"></i></p>
             <div class="main2">
           <div class="input_feild">
-              <input type="text" id="hours" placeholder="hours" >
-              <input type="text" id="minutes" placeholder="minutes">
-              <input type="text" id="seconds" placeholder="seconds">
+              <input type="number"  max="100" min="0"  id="hours" placeholder="hours" >
+              <input type="number" max="60" min="0"    id="minutes" placeholder="minutes" >
+              <input type="number" max="60" min="0" id="seconds" placeholder="seconds">
           </div>
           <div class="buttons">
-            <input type="button" value="Start" id="hours">
-            <input type="button" value="Stop"  id="minutes">
-            <input type="button" value="Reset" id="seconds">
+            <input type="button" value="Start" id="btn1">
+            <input type="button" value="Stop"  id="btn2">
+            <input type="button" value="Reset" id="btn3">
         </div>      
         </div>
          </div>     
         </div>
 
    <script>
-      
-      
+      let sec = document.querySelector('#seconds');
+      let min = document.querySelector('#minutes');
+      let hours = document.querySelector('#hours');
+      let id;
+     
+     function timer() {
 
+    if(sec.value === '0' && min.value === '0' && hours.value === '0'){
+      sec.value = 0;
+      min.value =0;
+      hours.value =0;
 
+    }
+
+     else if(sec.value > '0'){   
+      sec.value--;
+        
+    }
+    
+    else if(sec.value === '0' && min.value > '0'){
+      sec.value = 60;
+      min.value--;
+    }
+    
+    else if(min.value === '0' && hours.value > '0'){
+        min.value = 60;
+        hours.value--;    
+    } 
+
+     }
+    
+    function run(){
+      pause();
+      id =   setInterval(timer, 1000);
+    }
+
+  
+   function pause(){
+     clearInterval(id)
+   }
+
+  function  reset(){
+    pause();
+     document.querySelector('#seconds').value = null;
+     let min = document.querySelector('#minutes').value =null;
+    let hours = document.querySelector('#hours').value = null;
+  }
+
+  document.querySelector('#btn1').addEventListener('click', run);
+  document.querySelector('#btn2').addEventListener('click', pause);
+  document.querySelector('#btn3').addEventListener('click', reset);
    </script>
 
 </body>
