@@ -1,0 +1,50 @@
+.icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    color :hsl(219deg 88% 55%);
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.xx {
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+   align-content: center;
+   align-items: center;
+}
+
+
+.input {
+    font-size: 30px;
+    border: 0px;
+    border:0px solid #999999;
+    background-color: whitesmoke;
+    font-family: 'Alatsi';
+}
+
+.output {
+    font-size: 30px;
+    border: 0px;
+    font-family: 'Alatsi';
+}
+
+.lang1, .lang2 {
+    margin-bottom: 10px;
+    font-size: larger;
+    width: 100%;
+    border: 1px  solid #999999;
+    padding: 10px;
+    background-color: whitesmoke;
+    font-family: 'Alatsi';
+}
+ 
+.icon2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}

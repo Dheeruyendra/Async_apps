@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translator</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="translator.css">
     <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
     <script  src="https://kit.fontawesome.com/5b41285cd8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main">
-      
         <nav class="nav_bar">
            <h2 class="title">TOOLS<i class="fas fa-tools"></i></h2> 
           <ul>
@@ -22,10 +22,15 @@
           <li><a href="translator.html">Translator</a></li>
         </ul>  
         </nav>
-     
-        <form>
+    </div>
+        <div class="icon"><i class="fas fa-language fa-5x"></i></div>
 
-        <select class="lang1">
+        <div class="wrapper">
+           
+         <form>
+      <div class="xx">
+        <div class="box1">     
+        <select name ="form" class="lang1">
            <option>English</option> 
            <option>Hindi</option>
            <option>Spanish</option>
@@ -33,23 +38,36 @@
            <option>French</option>
            <option>Arabic</option>
         </select>
-         
-        <select class="lang2">
+    <div>  <textarea class="input" placeholder="Enter text" rows="7" ></textarea> </div>
+       </div>
+        
+    <div class="icon2">   <i class="fas fa-exchange-alt fa-3x"></i> </div>
+
+        <div class="box2">
+        <select name ="to" class="lang2">   
             <option>English</option> 
             <option>Hindi</option>
             <option>Spanish</option>
             <option>Italian</option>
             <option>French</option>
             <option>Arabic</option>
-         </select>
-     
-       
-         
-
-
-        </form>
-            
-
+        </select>
+       <div> <textarea class="output" placeholder="Translation" rows="7" disabled="disabled"></textarea></div>
         </div>
+
+    </div>
+
+     </div>
+
+      </form>
+     
+       <script>
+
+           
+       
+
+
+       </script> 
+          
 </body>
 </html>
