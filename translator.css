@@ -48,3 +48,21 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+.reset_btn {
+    font-family: 'Alatsi';
+    font-size: 22px;
+    align-content: center;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+
+}
+
+.reset_btn:hover {
+    color:hsl(219deg 88% 55%);
+}
+
+.btn {
+    margin-top: 20px;
+}
