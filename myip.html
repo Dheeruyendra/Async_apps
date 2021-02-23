@@ -36,9 +36,14 @@
         </div>
 
     <script>
+      
+   let output = document.querySelector('#ip_box');
 
+     fetch('https://ipapi.co/json/').then((response) => response.json())
+    .then((json) =>
+       output.value = json.ip);
 
-
+         
     </script>
   
 
