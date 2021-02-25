@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="translator.css">
     <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
     <script  src="https://kit.fontawesome.com/5b41285cd8.js" crossorigin="anonymous"></script>
+   <script defer src="translator.js" ></script>
 </head>
 <body>
     <div class="main">
@@ -31,7 +32,7 @@
          <form>
       <div class="xx">
         <div class="box1">     
-        <select name ="form" class="lang1">
+        <select name ="form" id="select_from" class="lang1">
             <option>English</option> 
             <option>Hindi</option>
             <option>Spanish</option>
@@ -54,13 +55,13 @@
             <option>Telugu</option>
             <option>Urdu</option>
         </select>
-    <div>  <textarea class="input" placeholder="Enter text" rows="7" ></textarea> </div>
+    <div>  <textarea class="input" id="input_txt_area" placeholder="Enter text" rows="7" ></textarea> </div>
        </div>
         
     <div class="icon2">   <i class="fas fa-exchange-alt fa-3x"></i> </div>
 
         <div class="box2">
-        <select name ="to" class="lang2">   
+        <select name ="to" id="select_to" class="lang2">   
             <option>English</option> 
             <option>Hindi</option>
             <option>Spanish</option>
@@ -84,25 +85,18 @@
             <option>Urdu</option>
         </select>
         </select>
-       <div> <textarea class="output" placeholder="Translation" rows="7" disabled="disabled"></textarea></div>
+       <div> <textarea class="output" id="output_txt_area" placeholder="Translation" rows="7" disabled="disabled"></textarea></div>
       
     </div>
    
     </div>
- <div class="btn"><input type="button" value="Reset" class="reset_btn"></div>     
+ <div class="btn"><input type="button" value="Reset" id="clear" class="reset_btn"></div>     
       <hr>    
 </div>
  
       </form>
       
-       <script>
-       
-        
-           
-       
-       
-
-       </script> 
+     
           
 </body>
 </html>
