@@ -8,27 +8,60 @@ let from  = document.querySelector('#select_from');
 
 function translator(){
 
-   let txt = inputText.value;
-  
+        const lang = {
+            English: 'en',
+            Hindi:'hi',
+            Spanish:'es',
+           Italian:'it',
+           French:'fr',
+            Arabic:'ar',
+            Gujarati:'gu',
+            Greek:'el',
+            Indonesian:'id',
+            Japanese:'ja-JP',
+            Kannada:'kn',
+            Korean:'ko',
+            Latin:'la',
+            Malayalam:'ml',
+           Marathi:'mr',
+            Mongolian:'mn',
+            Nepali:'ne',
+           Tamil:'ta',
+           Telugu:'te',
+            Urdu:'ur',
+        };
+
+        let url = new URL('https://api.mymemory.translated.net/get');
+
+       const parameters ={
+           q:inputText.value,
+           langpair:`${lang[from.value]}|${lang[to.value]}`,
+       };
+
+       console.log(parameters);
+       Object.keys(parameters).forEach((key)=>{
+            url.searchParams.append(key, parameters[key]);
+       });
+       console.log(url.searchParams);
+       console.log(url.search);
+      url.search = new URLSearchParams(parameters).toString();
+     
       
-   const request = new Request('https://api.mymemory.translated.net/',{
-       method:'GET',
-       q : txt,
-
-       langpair : 'en|hi',
-   });
-   console.log(txt);  
-   fetch(request).then(response => response.json).then(json=> outputText.value=json.responseData.translatedText);
-
-
+     fetch(url).then(response=> response.json()).then((json) =>{ 
+             outputText.value = json.responseData.translatedText
+        
+        });
 }
 
 
-inputText.addEventListener('change', translator);
-outputText.addEventListener('change', translator);
+inputText.addEventListener('input', translator);
+ to.addEventListener('input', translator);
+ from.addEventListener('input', translator);
 
  clr_btn.addEventListener('click', ()=>{
     inputText.value = null;
     outputText.value = null; 
+    from.value = "English";
+    to.value = "Hindi";
  });
 
