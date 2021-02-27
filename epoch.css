@@ -30,7 +30,7 @@
     overflow: hidden;
     width: 50vh;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .today_date_month {
@@ -45,14 +45,76 @@
     margin-bottom: 20px;
 }
 
-
-@media screen and   (max-width:500px){
-        
-    .today_date_month{
-        font-size: 20px;
-    }
-    .clock_week{
-       width: 100%;
-    }
-
+.epoch_timestamp{
+    display: flex;
+    width: 50vh;
+    margin-top: 20px;
+    font-family: 'Alatsi';
+    font-size: 21px;
 }
+
+.epoch_time{
+    font-size: 25px;
+    color: hsl(219deg 88% 55%); 
+    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.to_timestamp {
+    display: flex;
+    flex-direction: column;
+    background-color: #D6D6D6;
+   height: 260px;
+   width: 90vh;
+   border-radius: 3px;
+   box-shadow: 7px 7px 7px#00171F;
+   margin-top: 40px;
+}
+
+.to_timestamp  p{
+   
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: 'Alatsi';
+
+   
+  }
+
+  .to_timestamp input {
+    font-family: 'Alatsi';
+   display: flex;
+    justify-content: center;
+    
+    padding: 10px ;
+    
+  }
+
+  .output {
+      margin-top: 10px;
+      font-size: 22px;
+      font-family: 'Alatsi';
+      color:#050505 ;
+      margin-bottom: 20px
+  }
+  
+  #user_input {
+      width: 50vh;
+  }
+
+  #btn1 {
+      margin-top: 10px;
+     
+  }
+
+ #btn1, #btn2 {
+     margin-bottom: 10px;
+ }
+
+  #btn1:hover ,#btn2:hover{
+      color: hsl(219deg 88% 55%);
+  }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPOCH Converter</title>
     <link rel="stylesheet" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=Alatsi' rel='stylesheet'>
@@ -25,7 +26,7 @@
           <li><a href="translator.html">Translator</a></li>
         </ul>  
         </nav>
-           
+      </div>
         <div class="clock_week">
             <div class="time">
              <span class="icon"><i class="fas fa-clock fa-3x"></i></span>  
@@ -38,14 +39,22 @@
             </div>
             <hr>
             <div class="epoch_timestamp">
-            
+              <span  >Current EPOCH Time :</span>
+              
+              <span class="epoch_time"></span>
+
             </div>
 
 
           <div class="to_timestamp">
-
-
-          </div>
+        <p>Convert epoch to human-readable date</p>
+          <input type="number" id="user_input"  class="epoch_input" placeholder="enter timestamp">
+          <input type="button" id="btn1" value="Timestamp_to Human Date">
+          <input type="button" id="btn2" value="Reset">        
+            
+          <div class="output"> </div>
+          
+        </div>
 
           <div class="to_human_date">
 
@@ -54,7 +63,7 @@
 
  
 
-  </div>
+  
 
 </body>
 </html>
